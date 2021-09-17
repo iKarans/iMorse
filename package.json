@@ -1,0 +1,26 @@
+{
+  "name": "morse",
+  "version": "1.0.0",
+  "description": "\"jest for translator\"",
+  "main": "translator.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-jest": "^27.2.0",
+    "jest": "^27.2.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iKarans/Morse.git"
+  },
+  "author": "Karan Sivalingam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iKarans/Morse/issues"
+  },
+  "homepage": "https://github.com/iKarans/Morse#readme"
+}
