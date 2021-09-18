@@ -1,6 +1,6 @@
-import { englishToMorse } from "./data";
+import { englishToMorse, morseToEnglish} from "./data";
 
-export const translate = (str) => {
+export const translateToMorse = (str) => {
     let solutionArray = [];
     let splitArray = (str.toLowerCase()).split("");
     for(let i = 0; i < splitArray.length; i++) {
@@ -13,10 +13,30 @@ export const translate = (str) => {
     return solutionArray.join("");
 };
 
-export const isValidInput = (str) => {
+export const translateToEnglish = (str) => {
+    let solutionArray = [];
+    let splitArray = (str.toLowerCase()).split(" ");
+    for(let i = 0; i < splitArray.length; i++) {
+        solutionArray.push(morseToEnglish[splitArray[i]]);
+    };
+
+    return solutionArray.join("");
+};
+
+export const isValidEnglishInput = (str) => {
     let splitArray = (str.toLowerCase()).split("");
     for(let i = 0; i < splitArray.length; i++) {
         if(!(Object.keys(englishToMorse).includes(splitArray[i]))) {
+            return false;
+        };
+    };
+    return true;
+};
+
+export const isValidMorseInput = (str) => {
+    let splitArray = str.split(" ");
+    for(let i = 0; i < splitArray.length; i++) {
+        if(!(Object.keys(morseToEnglish).includes(splitArray[i]))) {
             return false;
         };
     };
