@@ -167,6 +167,7 @@ outputOne.addEventListener("keyup", () => {
     } else {
         alert("That is an invalid input you two brain celled chicken");
         outputOne.value = outputOne.value.slice(0, -1);
+        outputTwo.value = translateToMorse(outputOne.value);
     }
 });
 
@@ -175,13 +176,15 @@ outputOneB.addEventListener("keyup", e => {
         if(isValidMorseInput(outputOneB.value.slice(0, -1))) {
             outputTwo.value = translateToEnglish(outputOneB.value);
         } else {
-            alert("That is an invalid input you two brain celled chicken");
+            alert("That is an invalid input you hairy chicken");
             outputOneB.value = outputOneB.value.slice(0, -1);
         };
     } else if (e.code == "Backspace") {
         temp = outputOneB.value.split(" ");
         temp.pop()
         outputOneB.value = temp.join(" ");
+        outputTwo.value = translateToEnglish(outputOneB.value);
+    } else if (e.code == "Enter") {
         outputTwo.value = translateToEnglish(outputOneB.value);
     }
 });
