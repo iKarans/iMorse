@@ -186,7 +186,11 @@ outputOneB.addEventListener("keyup", e => {
             outputTwo.value = translateToEnglish(outputOneB.value);
         } else {
             alert("That is an invalid input you hairy chicken");
-            outputOneB.value = outputOneB.value.slice(0, -1);
+            temp = outputOneB.value.split(" ");
+            temp.pop()
+            temp.pop()
+            outputOneB.value = temp.join(" ");
+            outputTwo.value = translateToEnglish(outputOneB.value);
         };
     } else if (e.code == "Backspace") {
         temp = outputOneB.value.split(" ");
