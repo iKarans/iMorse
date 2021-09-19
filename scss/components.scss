@@ -1,12 +1,14 @@
 body {
     background-color: black;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .translater {
     &__heading {
         grid-column: 1 / -1;
         color:#2db0c6
+        font-family: 'Montserrat', sans-serif;
     }
     &__language-1 {
         background-color: #2C2C2E;
