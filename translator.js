@@ -42,3 +42,4 @@ export const isValidMorseInput = (str) => {
     };
     return true;
 };
+

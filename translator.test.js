@@ -53,6 +53,12 @@ describe("Testing isValidEnglishInput()", () => {
         let result = isValidEnglishInput(input);
         expect(result).toBe(output);
     });
+    it("Should return true if input is \".-\"", () => {
+        let input = ".-";
+        let output = true;
+        let result = isValidMorseInput(input);
+        expect(result).toBe(output);
+    });
     it("Should return true if input is \"-... . .- - ... / -... -.-- / -.. .-. .\"", () => {
         let input = "-... . .- - ... / -... -.-- / -.. .-. .";
         let output = true;
