@@ -1,0 +1,10 @@
+.translater {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 1fr 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
