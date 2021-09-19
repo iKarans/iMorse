@@ -161,7 +161,16 @@ exchangeArrows.addEventListener("click", () => {
 
 
 
-outputOne.addEventListener("keyup", () => {
+outputOne.addEventListener("keyup", (e) => {
+    if (e.code == "Enter") {
+        if(isValidEnglishInput(outputOne.value)) {
+            outputTwo.value = translateToMorse(outputOne.value);
+        } else {
+            alert("That is an invalid input you 3 chromosome cow");
+            outputOne.value = ""
+            outputTwo.value = translateToMorse(outputOne.value);
+        }
+    }
     if(isValidEnglishInput(outputOne.value)) {
         outputTwo.value = translateToMorse(outputOne.value);
     } else {
