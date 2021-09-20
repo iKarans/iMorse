@@ -1,10 +1,13 @@
 .translater {
     width: 90%;
+    min-height: 100vh;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto 1fr 1fr;
-    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: center;
     justify-items: center;
     align-items: center;
 }

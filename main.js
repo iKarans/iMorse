@@ -112,8 +112,7 @@ const translateToMorse = (str) => {
             solutionArray.push(" ");
         };
     };
-
-    return solutionArray.join("");
+    return solutionArray.join(" ");
 };
 
 const translateToEnglish = (str) => {
@@ -122,15 +121,17 @@ const translateToEnglish = (str) => {
     for(let i = 0; i < splitArray.length; i++) {
         solutionArray.push(morseToEnglish[splitArray[i]]);
     };
-
-    return solutionArray.join("");
+    // 😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏
+    let solutionString = solutionArray.join("");
+    if(solutionString.includes("boobies")) {
+        solutionString = solutionString.replace("boobies", "(.Y.)");
+    }
+    return solutionString;
 };
 const isValidMorseInput = (str) => {
     let splitArray = str.split(" ");
-    console.log(splitArray);
     for(let i = 0; i < splitArray.length; i++) {
         if(!(Object.values(englishToMorse).includes(splitArray[i]))) {
-            console.log(i);
             return false;
         };
     };
@@ -157,43 +158,55 @@ exchangeArrows.addEventListener("click", () => {
         outputOne.style.display = "inline-block";
         outputOneB.style.display = "none";
     }
+    outputOne.value = "";
+    outputOneB.value = "";
+    outputTwo.innerText = "";
 });
 
 
 
 outputOne.addEventListener("keyup", (e) => {
     if (e.code == "Enter") {
+        outputOne.value = outputOne.value.slice(0, -1);
         if(isValidEnglishInput(outputOne.value)) {
-            outputTwo.value = translateToMorse(outputOne.value);
+            outputTwo.innerText = translateToMorse(outputOne.value);
         } else {
-            alert("That is an invalid input you 3 chromosome cow");
+            alert("That is an invalid input you 3 chromosomed cow");
+            console.log(outputOne.value);
             outputOne.value = ""
-            outputTwo.value = translateToMorse(outputOne.value);
+            outputTwo.innerText = translateToMorse(outputOne.value);
         }
     }
     if(isValidEnglishInput(outputOne.value)) {
-        outputTwo.value = translateToMorse(outputOne.value);
+        outputTwo.innerText = translateToMorse(outputOne.value);
     } else {
         alert("That is an invalid input you two brain celled chicken");
         outputOne.value = outputOne.value.slice(0, -1);
-        outputTwo.value = translateToMorse(outputOne.value);
+        outputTwo.innerText = translateToMorse(outputOne.value);
     }
 });
 
 outputOneB.addEventListener("keyup", e => {
     if (e.code === "Space") {
         if(isValidMorseInput(outputOneB.value.slice(0, -1))) {
-            outputTwo.value = translateToEnglish(outputOneB.value);
+            outputTwo.innerText = translateToEnglish(outputOneB.value);
         } else {
             alert("That is an invalid input you hairy chicken");
-            outputOneB.value = outputOneB.value.slice(0, -1);
+            temp = outputOneB.value.split(" ");
+            temp.pop();
+            temp.pop();
+            outputOneB.value = temp.join(" ");
+            outputTwo.innerText = translateToEnglish(outputOneB.value);
         };
     } else if (e.code == "Backspace") {
         temp = outputOneB.value.split(" ");
         temp.pop()
         outputOneB.value = temp.join(" ");
-        outputTwo.value = translateToEnglish(outputOneB.value);
+        outputTwo.innerText = translateToEnglish(outputOneB.value);
     } else if (e.code == "Enter") {
-        outputTwo.value = translateToEnglish(outputOneB.value);
+        outputOneB.value = outputOneB.value.slice(0, -1)
+        outputTwo.innerText = translateToEnglish(outputOneB.value);
     }
 });
+
+

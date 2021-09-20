@@ -1,34 +1,45 @@
 body {
     background-color: black;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .translater {
     &__heading {
         grid-column: 1 / -1;
-        color:#2db0c6
+        color:#2db0c6;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 45px;
     }
     &__language-1 {
         background-color: #2C2C2E;
         padding: 10px 25px;
         border-radius: 10px;
         width: 100px;
+        justify-self: start;
+    }
+    &__arrows {
+        grid-column: 2 / 4;
     }
     &__language-2 {
         background-color: #2C2C2E;
         padding: 10px 25px;
         border-radius: 10px;
         width: 100px;
+        justify-self: end;
     }
     &__output-1 {
         grid-column: 1 / -1;
         background-color: #2C2C2E;
         border-radius: 10px;
         width: 100%;
-        min-height: 200px;
+        height: 200px;
         border: none;
         word-break: break-all;
+        padding: 10px;
         color: white;
+        font-size: 20px;
     }
     &__output-1b {
         display: none;
@@ -36,10 +47,13 @@ body {
         background-color: #2C2C2E;
         border-radius: 10px;
         width: 100%;
-        min-height: 200px;
+        height: 200px;
         border: none;
         word-break: break-all;
         color: white;
+        padding: 10px;
+        font-size:20px;
+        word-spacing: 10px;
     }
     &__output-2 {
         grid-row: 4 / 5;
@@ -47,8 +61,12 @@ body {
         background-color: #2C2C2E;
         border-radius: 10px;
         width: 100%;
-        min-height: 200px;
+        height: 200px;
         border: none;
+        word-break: break-all;
+        padding: 10px;
         color: white;
+        font-size: 20px;
+        word-spacing: 10px;
     }
 }
