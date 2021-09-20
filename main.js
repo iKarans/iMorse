@@ -144,6 +144,12 @@ const languageTwo = document.querySelector(".translater__language-2");
 const outputOne = document.querySelector(".translater__output-1");
 const outputOneB = document.querySelector(".translater__output-1b");
 const outputTwo = document.querySelector(".translater__output-2");
+const soundIcon = document.querySelector(".translater__sound");
+
+soundIcon.addEventListener("click", () => {
+    const morse = new morseSynth();
+    morse.play(outputOne.value);
+})
 
 exchangeArrows.addEventListener("click", () => {
     if(languageOne.innerText == "English") {
@@ -163,8 +169,9 @@ exchangeArrows.addEventListener("click", () => {
     outputTwo.innerText = "";
     // var morse = new morseSynth();
     // morse.play('Hello World.');
-
 });
+
+
 
 
 

@@ -68,6 +68,23 @@ body {
   font-size: 20px;
   word-spacing: 10px;
 }
+.translater__sound {
+  justify-self: start;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #2db0c6;
+  padding: 15px;
+  margin-left: 20px;
+}
+.translater__light {
+  grid-column: 4/5;
+  justify-self: end;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #2db0c6;
+  padding: 15px;
+  margin-right: 20px;
+}
 
 .translater {
   width: 90%;
@@ -75,7 +92,7 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-gap: 20px;
   justify-content: center;
   align-content: center;
