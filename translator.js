@@ -19,8 +19,11 @@ export const translateToEnglish = (str) => {
     for(let i = 0; i < splitArray.length; i++) {
         solutionArray.push(morseToEnglish[splitArray[i]]);
     };
-
-    return solutionArray.join("");
+    let solutionString = solutionArray.join("");
+    if(solutionString.includes("boobies")) {
+        solutionString = solutionString.replace("boobies", "(.Y.)");
+    }
+    return solutionString;
 };
 
 export const isValidEnglishInput = (str) => {
@@ -34,6 +37,9 @@ export const isValidEnglishInput = (str) => {
 };
 
 export const isValidMorseInput = (str) => {
+    if (typeof str != "string") {
+        return false;
+    }
     let splitArray = str.split(" ");
     for(let i = 0; i < splitArray.length; i++) {
         if(!(Object.keys(morseToEnglish).includes(splitArray[i]))) {
