@@ -112,8 +112,7 @@ const translateToMorse = (str) => {
             solutionArray.push(" ");
         };
     };
-
-    return solutionArray.join("");
+    return solutionArray.join(" ");
 };
 
 const translateToEnglish = (str) => {
@@ -122,14 +121,17 @@ const translateToEnglish = (str) => {
     for(let i = 0; i < splitArray.length; i++) {
         solutionArray.push(morseToEnglish[splitArray[i]]);
     };
-
-    return solutionArray.join("");
+    // 😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏
+    let solutionString = solutionArray.join("");
+    if(solutionString.includes("boobies")) {
+        solutionString = solutionString.replace("boobies", "(.Y.)");
+    }
+    return solutionString;
 };
 const isValidMorseInput = (str) => {
     let splitArray = str.split(" ");
     for(let i = 0; i < splitArray.length; i++) {
         if(!(Object.values(englishToMorse).includes(splitArray[i]))) {
-            console.log(i);
             return false;
         };
     };
@@ -158,7 +160,7 @@ exchangeArrows.addEventListener("click", () => {
     }
     outputOne.value = "";
     outputOneB.value = "";
-    outputTwo.value = "";
+    outputTwo.innerText = "";
 });
 
 
@@ -187,12 +189,7 @@ outputOne.addEventListener("keyup", (e) => {
 outputOneB.addEventListener("keyup", e => {
     if (e.code === "Space") {
         if(isValidMorseInput(outputOneB.value.slice(0, -1))) {
-            store = translateToEnglish(outputOneB.value);
-            if(store == "boobies") {
-                outputTwo.innerText = "(.Y.)"
-            } else {
-                outputTwo.innerText = store;
-            }
+            outputTwo.innerText = translateToEnglish(outputOneB.value);
         } else {
             alert("That is an invalid input you hairy chicken");
             temp = outputOneB.value.split(" ");
