@@ -148,8 +148,12 @@ const soundIcon = document.querySelector(".translater__sound");
 
 soundIcon.addEventListener("click", () => {
     const morse = new morseSynth();
-    morse.play(outputOne.value);
-})
+    if (languageOne.innerText == "English") {
+        morse.play(outputOne.value);
+    } else {
+        morse.play(outputTwo.innerText);
+    }
+});
 
 exchangeArrows.addEventListener("click", () => {
     if(languageOne.innerText == "English") {
