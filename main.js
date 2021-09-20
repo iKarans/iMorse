@@ -161,6 +161,9 @@ exchangeArrows.addEventListener("click", () => {
     outputOne.value = "";
     outputOneB.value = "";
     outputTwo.innerText = "";
+    // var morse = new morseSynth();
+    // morse.play('Hello World.');
+
 });
 
 
