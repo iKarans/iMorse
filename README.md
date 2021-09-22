@@ -1,6 +1,5 @@
-# Translator
-This is my transltor ...
+# Morse Code Translator
 
-## Sub heading
-This is a subheading
+## Introduction
+A Morse Code Translator desgined using HTML, SCSS, CSS and Javascript using a mobile-first approached.
 
