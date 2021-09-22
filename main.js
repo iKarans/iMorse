@@ -145,6 +145,18 @@ const outputOne = document.querySelector(".translater__output-1");
 const outputOneB = document.querySelector(".translater__output-1b");
 const outputTwo = document.querySelector(".translater__output-2");
 const soundIcon = document.querySelector(".translater__sound");
+const lightIcon = document.querySelector(".translater__light");
+const body = document.querySelector("body");
+
+lightIcon.addEventListener("click", () => {
+    body.classList.toggle("grey");
+    // languageOne.classList.toggle("light");
+    languageTwo.classList.toggle("light");
+    outputOne.classList.toggle("light");
+    outputOneB.classList.toggle("light");
+    outputTwo.classList.toggle("light");
+    exchangeArrows.classList.toggle("blackfont");
+})
 
 soundIcon.addEventListener("click", () => {
     const morse = new morseSynth();
@@ -171,8 +183,6 @@ exchangeArrows.addEventListener("click", () => {
     outputOne.value = "";
     outputOneB.value = "";
     outputTwo.innerText = "";
-    // var morse = new morseSynth();
-    // morse.play('Hello World.');
 });
 
 
