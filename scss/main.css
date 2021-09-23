@@ -84,8 +84,7 @@ body {
 .translater__sound {
   justify-self: start;
   font-size: 20px;
-  border-radius: 50%;
-  background-color: #2db0c6;
+  color: #2db0c6;
   padding: 15px;
   margin-left: 20px;
 }
@@ -93,8 +92,7 @@ body {
   grid-column: 4/5;
   justify-self: end;
   font-size: 20px;
-  border-radius: 50%;
-  background-color: #2db0c6;
+  color: #2db0c6;
   padding: 15px;
   margin-right: 20px;
 }
