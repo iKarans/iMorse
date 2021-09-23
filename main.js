@@ -195,7 +195,7 @@ outputOne.addEventListener("keyup", (e) => {
         if(isValidEnglishInput(outputOne.value)) {
             outputTwo.innerText = translateToMorse(outputOne.value);
         } else {
-            alert("That is an invalid input you 3 chromosomed cow");
+            alert("That is an invalid input.");
             console.log(outputOne.value);
             outputOne.value = ""
             outputTwo.innerText = translateToMorse(outputOne.value);
@@ -204,7 +204,7 @@ outputOne.addEventListener("keyup", (e) => {
     if(isValidEnglishInput(outputOne.value)) {
         outputTwo.innerText = translateToMorse(outputOne.value);
     } else {
-        alert("That is an invalid input you two brain celled chicken");
+        alert("That is an invalid.");
         outputOne.value = outputOne.value.slice(0, -1);
         outputTwo.innerText = translateToMorse(outputOne.value);
     }
@@ -215,7 +215,7 @@ outputOneB.addEventListener("keyup", e => {
         if(isValidMorseInput(outputOneB.value.slice(0, -1))) {
             outputTwo.innerText = translateToEnglish(outputOneB.value);
         } else {
-            alert("That is an invalid input you hairy chicken");
+            alert("That is an invalid input.");
             temp = outputOneB.value.split(" ");
             temp.pop();
             temp.pop();
