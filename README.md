@@ -13,3 +13,4 @@ As you enter an english letter, it will automatically translate it to morse. Thi
 
 * Make buttons switch on exchange arrow for larger screen.
 * Add more tests.
+* Import suddenly stopped working for data.
