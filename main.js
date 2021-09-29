@@ -1,3 +1,6 @@
+// import { englishToMorse, morseToEnglish } from "./data.js";
+// import { translateToMorse, isValidEnglishInput, translateToEnglish, isValidMorseInput } from "./translator.js";
+
 const englishToMorse = {
     a: ".-",
     b: "-...",
@@ -121,7 +124,7 @@ const translateToEnglish = (str) => {
     for(let i = 0; i < splitArray.length; i++) {
         solutionArray.push(morseToEnglish[splitArray[i]]);
     };
-    // 😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏
+    // 😏
     let solutionString = solutionArray.join("");
     if(solutionString.includes("boobies")) {
         solutionString = solutionString.replace("boobies", "(.Y.)");
