@@ -1,4 +1,4 @@
-import { englishToMorse, morseToEnglish} from "./data";
+import { englishToMorse, morseToEnglish} from "./data.js";
 
 export const translateToMorse = (str) => {
     let solutionArray = [];
@@ -9,7 +9,7 @@ export const translateToMorse = (str) => {
             solutionArray.push(" ");
         };
     };
-    return solutionArray.join(" ");
+    return solutionArray.join("");
 };
 
 export const translateToEnglish = (str) => {
@@ -27,6 +27,9 @@ export const translateToEnglish = (str) => {
 };
 
 export const isValidEnglishInput = (str) => {
+    if(typeof str != "string") {
+        return false;
+    }
     let splitArray = (str.toLowerCase()).split("");
     for(let i = 0; i < splitArray.length; i++) {
         if(!(Object.keys(englishToMorse).includes(splitArray[i]))) {
@@ -37,6 +40,9 @@ export const isValidEnglishInput = (str) => {
 };
 
 export const isValidMorseInput = (str) => {
+    if(typeof str != "string") {
+        return false;
+    }
     let splitArray = str.split(" ");
     for(let i = 0; i < splitArray.length; i++) {
         if(!(Object.values(englishToMorse).includes(splitArray[i]))) {
