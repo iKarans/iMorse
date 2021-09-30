@@ -8,8 +8,19 @@ As you enter an english letter, it will automatically translate it to morse. Thi
 ## Testing
 * To run Unit Testing, use [jest](https://jestjs.io/).
 * The tests can be found  in translator.test.js.
+ ```
+# get project
+git clone project-url
+# go into project
+cd project-name
+# add dependcies
+npm install
+# run test scripts
+npm run test
+```
 
 ## Improvements / To Dos
 
 * Make buttons switch on exchange arrow for larger screen.
 * Add more tests.
+
