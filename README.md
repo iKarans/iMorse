@@ -24,4 +24,5 @@ npm run test
 
 * Make buttons switch on exchange arrow for larger screen.
 * Add more tests.
+* Look at if you add a large sentence to translate.
 
